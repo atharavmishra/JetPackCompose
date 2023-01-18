@@ -12,6 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import android.myapplication.jetpackcompose.ui.theme.JetpackComposeTheme
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +46,10 @@ fun Customtext(text1 : String){
 @Composable
 fun DefaultPreview() {
     JetpackComposeTheme {
-        Column {
+        Column(modifier = Modifier.fillMaxSize() ) {
+            androidx.compose.material.Surface(modifier = Modifier.width(200.dp).height(200.dp),color = MaterialTheme.colors.primary) {
+                
+            }
             Greeting("Android")
             Customtext(text1 = "Hello world")
         }
