@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
@@ -36,7 +37,7 @@ fun ExpandableCard(){
         onClick = {
             expandedState = !expandedState
         }){
-        Column(modifier = Modifier.fillMaxWidth()) { Row{
+        Column(modifier = Modifier.fillMaxWidth()) { Row(verticalAlignment = Alignment.CenterVertically){
             Text(modifier = Modifier.weight(6f), text = "Atharv ",
                 fontSize = MaterialTheme.typography.h6.fontSize, 
                 fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
